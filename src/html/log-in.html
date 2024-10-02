@@ -43,26 +43,22 @@
                     Vui lòng điền chi tiết đăng nhập tài khoản giảng của bạn bên
                     dưới
                   </p>
-                  <form>
+                  <form id="login-form">
                     <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label"
-                        >Nhập email</label
-                      >
+                      <label for="email" class="form-label">Nhập email</label>
                       <input
                         type="email"
                         class="form-control"
-                        id="exampleInputEmail1"
+                        id="email"
                         aria-describedby="emailHelp"
                       />
                     </div>
                     <div class="mb-4">
-                      <label for="exampleInputPassword1" class="form-label"
-                        >Mật khẩu</label
-                      >
+                      <label for="password" class="form-label">Mật khẩu</label>
                       <input
                         type="password"
                         class="form-control"
-                        id="exampleInputPassword1"
+                        id="password"
                       />
                     </div>
                     <div
@@ -90,12 +86,12 @@
                         >Quên mật khẩu?</a
                       >
                     </div>
-                    <a
-                      href="./index.html"
+                    <button
                       class="btn btn-primary w-100 py-8 fs-4 rounded-2"
                       style="background-color: #0961f5"
-                      >Đăng nhập</a
                     >
+                      Đăng nhập
+                    </button>
                   </form>
                 </div>
               </div>
@@ -107,5 +103,7 @@
 
     <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
     <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script type="module" src="../js/login.js"></script>
   </body>
 </html>

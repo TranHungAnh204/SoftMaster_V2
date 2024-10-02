@@ -1,0 +1,1 @@
+export const USER_INFO_STORAGE_KEY = "SOFT_MASTER";
