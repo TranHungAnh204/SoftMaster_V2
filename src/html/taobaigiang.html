@@ -17,56 +17,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
-    <style>
-      .card-container {
-        padding-top: 100px;
-        box-sizing: border-box;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-      }
-      .card-custom {
-        border-radius: 12px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        text-align: left;
-        border: none;
-        background-color: white;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        flex: 1;
-        min-width: 220px;
-        box-sizing: border-box;
-      }
-      .card-content {
-        flex: 1;
-        margin-right: 20px;
-      }
-      .card-content h3 {
-        font-size: 1.25rem;
-        margin: 0;
-      }
-
-      .card-content p {
-        font-size: 2rem;
-        font-weight: bold;
-        margin: 5px 0;
-      }
-
-      .card-content span {
-        font-size: 0.875rem;
-      }
-
-      .card-icon img {
-        width: 100%;
-        height: 60px;
-        object-fit: cover;
-      }
-    </style>
   </head>
+  
   <body>
+    <!--  Body Wrapper -->
     <div
       class="page-wrapper"
       id="main-wrapper"
@@ -76,7 +30,9 @@
       data-sidebar-position="fixed"
       data-header-position="fixed"
     >
+      <!-- Sidebar Start -->
       <aside class="left-sidebar">
+        <!-- Sidebar scroll-->
         <div>
           <div
             class="brand-logo d-flex align-items-center justify-content-between"
@@ -85,8 +41,8 @@
               <h2>
                 <strong class="text-primary">Soft</strong>
                 <strong class="" style="color: #202224">Master</strong>
-              </h2></a
-            >
+              </h2>
+            </a>
             <div
               class="close-btn d-xl-none d-block sidebartoggler cursor-pointer"
               id="sidebarCollapse"
@@ -94,93 +50,69 @@
               <i class="ti ti-x fs-8"></i>
             </div>
           </div>
+          <!-- Sidebar navigation-->
           <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
             <ul id="sidebarnav">
               <li class="nav-small-cap">
                 <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+         
               </li>
               <li class="sidebar-item">
-                <ul class="" href="./index.html" aria-expanded="false">
-                  <li class="sidebar-item">
-                    <a
-                      class="sidebar-link"
-                      href="./index.html"
-                      aria-expanded="false"
-                    >
-                      <span class="hide-menu">Trang tổng quan</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a
-                      class="sidebar-link"
-                      href="./baigiangcuatoi.html"
-                      aria-expanded="false"
-                    >
-                      <span class="hide-menu">Bài Giảng Của Tôi</span>
-                    </a>
-                  </li>
-                  <li class="sidebar-item">
-                    <a
-                      class="sidebar-link"
-                      href="./luutrubaigiang.html"
-                      aria-expanded="false"
-                    >
-                      <span class="hide-menu">Lưu trữ, Tạo Bài Giảng Mới</span>
-                    </a>
-                  </li>
-                  <li class="sidebar-item">
-                    <a
-                      class="sidebar-link"
-                      href="./giaobaitap.html"
-                      aria-expanded="false"
-                    >
-                      <span class="hide-menu">Giao Bài Tập</span>
-                    </a>
-                  </li>
-                  <li class="sidebar-item">
-                    <a
-                      class="sidebar-link"
-                      href="./kiemtrabaitap.html"
-                      aria-expanded="false"
-                    >
-                      <span class="hide-menu">Kiểm Tra Bài Tập</span>
-                    </a>
-                  </li>
-                  <li class="sidebar-item">
-                    <a
-                      class="sidebar-link"
-                      href="./taotracnghiem.html"
-                      aria-expanded="false"
-                    >
-                      <span class="hide-menu">Tạo Trắc Nghiệm</span></a
-                    >
-                  </li>
-                  <li class="sidebar-item">
-                    <a
-                      class="sidebar-link"
-                      href="./thongkediem.html"
-                      aria-expanded="false"
-                    >
-                      <span class="hide-menu">Thống Kê Điểm</span>
-                    </a>
-                  </li>
-                  <li class="sidebar-item">
-                    <a
-                      class="sidebar-link"
-                      href="./lichday.html"
-                      aria-expanded="false"
-                    >
-                      <span class="hide-menu">Lịch Dạy</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
+                <a
+                  class=""
+                  href="./index.html"
+                  aria-expanded="false"
+                >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./index.html" aria-expanded="false">
+                    <span class="hide-menu">Trang tổng quan</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./baigiangcuatoi.html" aria-expanded="false">
+                    <span class="hide-menu">Bài Giảng Của Tôi</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./luutrubaigiang.html" aria-expanded="false">
+                    <span class="hide-menu">Lưu Trữ Bài Giảng</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./giaobaitap.html" aria-expanded="false">
+                    <span class="hide-menu">Giao Bài Tập</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./kiemtrabaitap.html" aria-expanded="false">
+                    <span class="hide-menu">Kiểm Tra Bài Tập</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./taotracnghiem.html" aria-expanded="false">
+                    <span class="hide-menu">Tạo Trắc Nghiệm</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./thongkediem.html" aria-expanded="false">
+                    <span class="hide-menu">Thống Kê Điểm</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./lichday.html" aria-expanded="false">
+                    <span class="hide-menu">Lịch Dạy</span>
+                  </a>
+                </li>   
           </nav>
+          <!-- End Sidebar navigation -->
         </div>
+        <!-- End Sidebar scroll-->
       </aside>
-
+      <!--  Sidebar End -->
+      <!--  Main wrapper -->
       <div class="body-wrapper">
+        <!--  Header Start -->
+          
         <header class="app-header">
           <nav class="navbar navbar-expand-lg navbar-light">
             <ul class="navbar-nav">
@@ -189,11 +121,13 @@
                   class="nav-link sidebartoggler nav-icon-hover"
                   id="headerCollapse"
                   href="javascript:void(0)"
-                  ><i class="ti ti-menu-2"></i
-                ></a>
+                >
+                  <i class="ti ti-menu-2"></i>
+                </a>
               </li>
               <li class="nav-item">
                 <div class="input-group">
+                  
                   <input
                     style="width: 388px; background-color: #f5f6fa"
                     type="text"
@@ -210,12 +144,14 @@
               <ul
                 class="navbar-nav flex-row ms-auto align-items-center justify-content-end"
               >
+                <!-- Thông báo -->
                 <li class="nav-item mx-2">
                   <a class="nav-link" href="javascript:void(0)">
                     <i class="ti ti-bell-ringing"></i>
                     <div class="notification bg-primary rounded-circle"></div>
                   </a>
                 </li>
+                <!-- Ngôn ngữ -->
                 <li class="nav-item mx-2 dropdown">
                   <a
                     class="nav-link dropdown-toggle d-flex align-items-center"
@@ -248,6 +184,7 @@
                         English</a
                       >
                     </li>
+                    <!-- Thêm các ngôn ngữ khác tại đây -->
                   </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -263,7 +200,7 @@
                       alt=""
                       width="35"
                       height="35"
-                      class="rounded-circle avatar"
+                      class="rounded-circle"
                     />
                   </a>
                   <div
@@ -285,12 +222,11 @@
                         <i class="ti ti-mail fs-6"></i>
                         <p class="mb-0 fs-3">Đổi Mật Khẩu</p>
                       </a>
-                      <button
-                        id="sign-out"
+                      <a
+                        href="./log-in.html"
                         class="btn btn-outline-primary mx-3 mt-2 d-block"
+                        >Đăng Xuất</a
                       >
-                        Đăng Xuất
-                      </button>
                     </div>
                   </div>
                 </li>
@@ -298,55 +234,46 @@
             </div>
           </nav>
         </header>
-
-        <div class="container my-4">
-          <div class="card-container">
-            <div class="card-custom">
-              <div class="card-content">
-                <h3>Tổng học sinh</h3>
-                <p>1,053</p>
-                <span class="percentage-up">tăng 8.5% Tăng từ hôm qua</span>
+        <body>
+          <div class="container mt-5">
+            <h2>Add New Lesson</h2>
+            <form id="addLessonForm" action="http://localhost:3001/lesson/add" method="POST">
+              <div class="mb-3">
+                <label for="title" class="form-label">Lesson Title</label>
+                <input type="text" class="form-control" id="title" name="title" placeholder="Enter lesson title" required>
               </div>
-              <div class="card-icon">
-                <img src="../assets/images/main2.png" alt="Tổng học sinh" />
+              
+              <div class="mb-3">
+                <label for="videoUpload" class="form-label">Upload Video</label>
+                <input class="form-control" type="file" id="videoUpload" name="videoFile" accept="video/*">
               </div>
-            </div>
-            <div class="card-custom">
-              <div class="card-content">
-                <h3>Tổng giảng viên</h3>
-                <p>102</p>
-                <span class="percentage-up"
-                  >tăng 1.3% Tăng so với tuần trước</span
-                >
+              
+              <div class="mb-3">
+                <label for="videoUrl" class="form-label">Or Video URL</label>
+                <input type="url" class="form-control" id="videoUrl" name="video" placeholder="https://www.youtube.com/embed/example" required>
               </div>
-              <div class="card-icon">
-                <img src="../assets/images/main2.png" alt="Tổng giảng viên" />
+        
+              <div class="mb-3">
+                <label for="describe" class="form-label">Description</label>
+                <textarea class="form-control" id="describe" name="describe" rows="3" placeholder="Enter lesson description" required></textarea>
               </div>
-            </div>
-            <div class="card-custom">
-              <div class="card-content">
-                <h3>Lượt đăng kí</h3>
-                <p>1,001</p>
-                <span class="percentage-down">giảm 4.3% Xuống từ hôm qua</span>
+        
+              <div class="mb-3">
+                <label for="courseID" class="form-label">Course ID</label>
+                <input type="text" class="form-control" id="courseID" name="courseID" placeholder="Enter course ID" required>
               </div>
-              <div class="card-icon">
-                <img src="../assets/images/main1.png" alt="Lượt đăng kí" />
-              </div>
-            </div>
-            <div class="card-custom">
-              <div class="card-content">
-                <h3>Tiến độ sinh viên</h3>
-                <p>89%</p>
-                <span class="percentage-up">tăng 1.8% Lên từ hôm qua</span>
-              </div>
-              <div class="card-icon">
-                <img src="../assets/images/main3.png" alt="Tiến độ sinh viên" />
-              </div>
-            </div>
+        
+              <button type="submit" class="btn btn-primary">Add Lesson</button>
+            </form>
           </div>
-        </div>
-      </div>
-    </div>
+        
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        </body>
+        
+
+        <!--  Header End -->
+
+       
     <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
     <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/sidebarmenu.js"></script>
@@ -354,7 +281,5 @@
     <script src="../assets/libs/apexcharts/dist/apexcharts.min.js"></script>
     <script src="../assets/libs/simplebar/dist/simplebar.js"></script>
     <script src="../assets/js/dashboard.js"></script>
-
-    <script type="module" src="../js/common.js"></script>
   </body>
 </html>
