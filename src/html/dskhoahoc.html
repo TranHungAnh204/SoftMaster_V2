@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -100,7 +103,11 @@
                                 <i class="ti ti-menu-2"></i>
                             </a>
                         </li>
-                       
+                        <li class="nav-item">
+                            <div class="input-group">
+                                <input style="width: 388px; background-color: #f5f6fa" type="text" class="form-control rounded-5" placeholder="Tìm kiếm" />
+                            </div>
+                        </li>
                     </ul>
                     <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
                         <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
@@ -147,6 +154,84 @@
                         </ul>
                     </div>
                 </nav>
+                <div class="container">
+                    <h2 class="mt-4 mb-4">Danh sách khóa học</h2>
+                    
+                    <!-- Tìm kiếm khóa học -->
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Tìm kiếm khóa học" id="searchInput" onkeyup="searchCourse()" />
+                    </div>
+                    
+                    <div class="container mt-5">
+                        <h2>Danh Sách Khóa Học</h2>
+                        <table class="table table-striped" id="courseTable">
+                            <thead>
+                                <tr>
+                                    <th>Hình Ảnh</th>
+                                    <th>Tên Khóa Học</th>
+                                    <th>Mô Tả</th>
+                                    <th>Giảng Viên</th>
+                                    <th>Thao Tác</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Ví dụ hiển thị khóa học -->
+                                <tr>
+                                    <td><img src="https://i.ibb.co/3NRCYvb/lap-trinh-android.png" alt="Khóa học Android" class="course-img" style="width: 80px; height: auto;"></td>
+                                    <td>Khóa học Android</td>
+                                    <td>Mô tả khóa học lập trình Android.</td>
+                                    <td>Giảng viên A</td>
+                                    <td>
+                                        <a href="./chitietkhoahoc.html?id=1" class="btn btn-primary btn-sm">Chi tiết</a>
+                                        <a href="./updatekhoahoc.html?id=1" class="btn btn-warning btn-sm">Cập nhật</a>
+                                        <button class="btn btn-danger btn-sm" onclick="deleteCourse(1)">Xóa</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="https://i.ibb.co/3NRCYvb/lap-trinh-ios.png" alt="Khóa học iOS" class="course-img" style="width: 80px; height: auto;"></td>
+                                    <td>Khóa học iOS</td>
+                                    <td>Mô tả khóa học lập trình iOS.</td>
+                                    <td>Giảng viên B</td>
+                                    <td>
+                                        <a href="./chitietkhoahoc.html?id=2" class="btn btn-primary btn-sm">Chi tiết</a>
+                                        <a href="./updatekhoahoc.html?id=2" class="btn btn-warning btn-sm">Cập nhật</a>
+                                        <button class="btn btn-danger btn-sm" onclick="deleteCourse(2)">Xóa</button>
+                                    </td>
+                                </tr>
+                                <!-- Các khóa học khác -->
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <script>
+                        function deleteCourse(courseId) {
+                            if (confirm("Bạn có chắc chắn muốn xóa khóa học này không?")) {
+                                // Gọi API hoặc thực hiện logic xóa khóa học
+                                alert("Khóa học đã được xóa!");
+                            }
+                        }
+                    </script>
+                    
+                    <script>
+                        function searchCourse() {
+                            let input = document.getElementById('searchInput').value.toLowerCase();
+                            let table = document.getElementById('courseTable');
+                            let rows = table.getElementsByTagName('tr');
+                            
+                            for (let i = 1; i < rows.length; i++) { // Bắt đầu từ 1 để bỏ qua hàng tiêu đề
+                                let cells = rows[i].getElementsByTagName('td');
+                                let courseName = cells[1].innerText.toLowerCase();
+                                
+                                if (courseName.includes(input)) {
+                                    rows[i].style.display = '';
+                                } else {
+                                    rows[i].style.display = 'none';
+                                }
+                            }
+                        }
+                    </script>
+                </div>
+                
             </header>
             <!-- Header End -->
         </div>

@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -100,7 +103,11 @@
                                 <i class="ti ti-menu-2"></i>
                             </a>
                         </li>
-                       
+                        <li class="nav-item">
+                            <div class="input-group">
+                                <input style="width: 388px; background-color: #f5f6fa" type="text" class="form-control rounded-5" placeholder="Tìm kiếm" />
+                            </div>
+                        </li>
                     </ul>
                     <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
                         <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
@@ -147,10 +154,34 @@
                         </ul>
                     </div>
                 </nav>
+                <div class="container">
+                    <h2 class="mt-4 mb-4">Thêm khóa học</h2>
+                
+                    <form>
+                        <div class="mb-3"> 
+                            <label for="courseName" class="form-label">Tên khóa học</label>
+                            <input type="text" class="form-control" id="courseName" placeholder="Nhập tên khóa học" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="courseDescription" class="form-label">Mô tả khóa học</label>
+                            <textarea class="form-control" id="courseDescription" rows="3" placeholder="Nhập mô tả khóa học"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="coursePrice" class="form-label">Giá</label>
+                            <input type="number" class="form-control" id="coursePrice" placeholder="Nhập giá khóa học" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="courseImage" class="form-label">Ảnh khóa học</label>
+                            <input type="file" class="form-control" id="courseImage" accept="image/*" />
+                        </div>
+                        <button type="submit" class="btn btn-primary">Thêm khóa học</button>
+                        
             </header>
             <!-- Header End -->
+             
         </div>
         <!--  Main wrapper End -->
+          
 
         <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
         <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -162,3 +193,4 @@
     </div>
 </body>
 </html>
+

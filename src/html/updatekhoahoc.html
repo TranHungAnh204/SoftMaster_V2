@@ -1,0 +1,19 @@
+<div class="container mt-5">
+    <h2>Cập nhật Khóa học</h2>
+    <form action="/updateCourse" method="post">
+        <div class="mb-3">
+            <label for="courseName" class="form-label">Tên Khóa Học</label>
+            <input type="text" class="form-control" id="courseName" value="Tên Khóa Học" required>
+        </div>
+        <div class="mb-3">
+            <label for="courseDescription" class="form-label">Mô Tả Khóa Học</label>
+            <textarea class="form-control" id="courseDescription" rows="3" required>Mô tả khóa học</textarea>
+        </div>
+        <div class="mb-3">
+            <label for="courseInstructor" class="form-label">Giảng Viên</label>
+            <input type="text" class="form-control" id="courseInstructor" value="Giảng viên A" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Cập nhật</button>
+        <a href="./khoahoc.html" class="btn btn-secondary">Hủy</a>
+    </form>
+</div>
