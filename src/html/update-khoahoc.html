@@ -90,7 +90,7 @@
                     href="./them-khoahoc.html"
                     aria-expanded="false"
                   >
-                    <span class="hide-menu">Thêm khóa học</span>
+                    <span class="hide-menu">Cập nhật khoá học</span>
                   </a>
                 </li>
               </ul>
@@ -162,6 +162,16 @@
                 >
                   <i class="ti ti-menu-2"></i>
                 </a>
+              </li>
+              <li class="nav-item">
+                <div class="input-group">
+                  <input
+                    style="width: 388px; background-color: #f5f6fa"
+                    type="text"
+                    class="form-control rounded-5"
+                    placeholder="Tìm kiếm"
+                  />
+                </div>
               </li>
             </ul>
             <div
@@ -264,33 +274,75 @@
         <!-- Header End -->
 
         <div class="container px-4" style="margin-top: 100px">
-          <h2 class="mt-4 mb-4">Danh sách khóa học</h2>
+          <h2 class="mt-4 mb-4">Cập nhật khoá học</h2>
 
-          <!-- Tìm kiếm khóa học -->
-          <form class="input-group mb-3 search-form">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Tìm kiếm khóa học"
-              id="searchInput"
-            />
+          <form class="update-course-form">
+            <div class="mb-3">
+              <label for="courseName" class="form-label">Tên khóa học</label>
+              <input
+                type="text"
+                class="form-control"
+                id="courseName"
+                placeholder="Nhập tên khóa học"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="courseDescription" class="form-label"
+                >Mô tả khóa học</label
+              >
+              <textarea
+                class="form-control"
+                id="courseDescription"
+                rows="3"
+                placeholder="Nhập mô tả khóa học"
+              ></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="coursePrice" class="form-label">Giá</label>
+              <input
+                type="number"
+                class="form-control"
+                id="coursePrice"
+                placeholder="Nhập giá khóa học"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="subject" class="form-label">Chủ đề</label>
+              <select type="number" class="form-select" id="subject">
+                <option value="">Chọn chủ đề</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="courseImage" class="form-label">Ảnh khóa học</label>
+              <input
+                type="file"
+                class="form-control"
+                id="courseImage"
+                accept="image/*"
+              />
+            </div>
+
+            <div class="mb-3 d-none preview">
+              <label for="" class="form-label d-block">Preview</label>
+              <img
+                src="https://picsum.photos/200/200"
+                alt="Preview"
+                style="
+                  width: 150px;
+                  height: 150px;
+                  object-fit: cover;
+                  border-radius: 6px;
+                "
+                class="preview-img"
+              />
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              Cập nhật khoá học
+            </button>
           </form>
-
-          <div class="mt-4">
-            <h2>Danh Sách Khóa Học</h2>
-            <table class="table table-striped" id="courseTable">
-              <thead>
-                <tr>
-                  <th>Hình Ảnh</th>
-                  <th>Tên Khóa Học</th>
-                  <th>Mô Tả</th>
-                  <th>Giá Tiền</th>
-                  <th>Thao Tác</th>
-                </tr>
-              </thead>
-              <tbody class="course-list"></tbody>
-            </table>
-          </div>
         </div>
       </div>
       <!--  Main wrapper End -->
