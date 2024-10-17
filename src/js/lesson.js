@@ -1,7 +1,4 @@
-import { USER_INFO_STORAGE_KEY } from "../constants/constants.js";
 import { request } from "../utils/request.js";
-
-const user = JSON.parse(localStorage.getItem(USER_INFO_STORAGE_KEY));
 
 // lesson list
 const deleteLesson = async (id) => {
@@ -134,11 +131,6 @@ const renderFormData = async () => {
 
     updateLessonForm.querySelector("#lessonName").value = res.title;
     updateLessonForm.querySelector("#course").value = res.courseID;
-    console.log(
-      "352 ~ renderFormData ~ updateLessonForm.querySele:",
-      updateLessonForm.querySelector("#course").value,
-      res.courseID
-    );
   } catch (error) {
     console.log("Failed");
   }

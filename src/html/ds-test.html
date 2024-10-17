@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Soft Master | Trang Quản Trị</title>
+    <title>Soft Master | Danh sách bài test</title>
     <link
       rel="shortcut icon"
       type="image/png"
@@ -49,7 +49,7 @@
           </div>
         </div>
 
-        <!-- Sidebar navigation-->
+        <<!-- Sidebar navigation-->
         <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
           <ul id="sidebarnav">
             <li class="nav-small-cap">
@@ -186,7 +186,7 @@
       <!--  Main wrapper -->
       <div class="body-wrapper">
         <!--  Header Start -->
-        <header class="app-header">
+        <div class="app-header top-0">
           <nav class="navbar navbar-expand-lg navbar-light">
             <ul class="navbar-nav">
               <li class="nav-item d-block d-xl-none">
@@ -295,8 +295,24 @@
               </ul>
             </div>
           </nav>
-        </header>
+        </div>
         <!-- Header End -->
+
+        <div class="px-4" style="margin-top: 100px">
+          <div class="mt-4">
+            <h2>Danh Sách Bài Test</h2>
+            <table class="table table-striped" id="test-table">
+              <thead>
+                <tr>
+                  <th>STT</th>
+                  <th>Tên Bài Test</th>
+                  <th>Thao Tác</th>
+                </tr>
+              </thead>
+              <tbody class="test-list"></tbody>
+            </table>
+          </div>
+        </div>
       </div>
       <!--  Main wrapper End -->
 
@@ -305,7 +321,8 @@
       <script src="../assets/js/sidebarmenu.js"></script>
       <script src="../assets/js/app.min.js"></script>
 
-      <script src="../js/common.js" type="module"></script>
+      <script type="module" src="../js/common.js"></script>
+      <script type="module" src="../js/test.js"></script>
     </div>
   </body>
 </html>
