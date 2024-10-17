@@ -185,7 +185,7 @@ const renderFormData = async () => {
 };
 
 if (updateCourseForm) {
-  renderSubjectSelect();
+  await renderSubjectSelect();
 
   // fill data to form
   renderFormData();

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Soft Master | Trang Quản Trị</title>
+    <title>Soft Master | Cập nhật bài học</title>
     <link
       rel="shortcut icon"
       type="image/png"
@@ -114,19 +114,19 @@
                 <li class="sidebar-item">
                   <a
                     class="sidebar-link"
-                    href="./videobaihoc.html"
+                    href="./ds-baihoc.html"
                     aria-expanded="false"
                   >
-                    <span class="hide-menu">Video bài học</span>
+                    <span class="hide-menu">Danh sách bài học</span>
                   </a>
                 </li>
                 <li class="sidebar-item">
                   <a
                     class="sidebar-link"
-                    href="./test.html"
+                    href="./them-baihoc.html"
                     aria-expanded="false"
                   >
-                    <span class="hide-menu">Test</span>
+                    <span class="hide-menu">Thêm bài học</span>
                   </a>
                 </li>
               </ul>
@@ -143,7 +143,6 @@
             </li>
           </ul>
         </nav>
-
         <!-- End Sidebar navigation -->
       </aside>
       <!--  Sidebar End -->
@@ -162,6 +161,16 @@
                 >
                   <i class="ti ti-menu-2"></i>
                 </a>
+              </li>
+              <li class="nav-item">
+                <div class="input-group">
+                  <input
+                    style="width: 388px; background-color: #f5f6fa"
+                    type="text"
+                    class="form-control rounded-5"
+                    placeholder="Tìm kiếm"
+                  />
+                </div>
               </li>
             </ul>
             <div
@@ -264,33 +273,30 @@
         <!-- Header End -->
 
         <div class="px-4" style="margin-top: 100px">
-          <h2 class="mt-4 mb-4">Danh sách khóa học</h2>
+          <h2 class="mt-4 mb-4">Cập nhật bài học</h2>
 
-          <!-- Tìm kiếm khóa học -->
-          <form class="input-group mb-3 search-form">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Tìm kiếm khóa học"
-              id="searchInput"
-            />
+          <form class="update-lesson-form">
+            <div class="mb-3">
+              <label for="lessonName" class="form-label">Tên bài học</label>
+              <input
+                type="text"
+                class="form-control"
+                id="lessonName"
+                placeholder="Nhập tên bài học"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="course" class="form-label">Khoá học</label>
+              <select class="form-select" id="course">
+                <option value="">Chọn khoá học</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              Cập nhật bài học
+            </button>
           </form>
-
-          <div class="mt-4">
-            <h2>Danh Sách Khóa Học</h2>
-            <table class="table table-striped" id="courseTable">
-              <thead>
-                <tr>
-                  <th>Hình Ảnh</th>
-                  <th>Tên Khóa Học</th>
-                  <th>Mô Tả</th>
-                  <th>Giá Tiền</th>
-                  <th>Thao Tác</th>
-                </tr>
-              </thead>
-              <tbody class="course-list"></tbody>
-            </table>
-          </div>
         </div>
       </div>
       <!--  Main wrapper End -->
@@ -301,7 +307,7 @@
       <script src="../assets/js/app.min.js"></script>
 
       <script type="module" src="../js/common.js"></script>
-      <script type="module" src="../js/course.js"></script>
+      <script type="module" src="../js/lesson.js"></script>
     </div>
   </body>
 </html>
