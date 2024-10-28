@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Soft Master | Trang Quản Trị</title>
+    <title>Soft Master | Danh sách video bài học</title>
     <link
       rel="shortcut icon"
       type="image/png"
@@ -222,7 +222,7 @@
       <!--  Main wrapper -->
       <div class="body-wrapper">
         <!--  Header Start -->
-        <header class="app-header">
+        <div class="app-header top-0">
           <nav class="navbar navbar-expand-lg navbar-light">
             <ul class="navbar-nav">
               <li class="nav-item d-block d-xl-none">
@@ -331,8 +331,26 @@
               </ul>
             </div>
           </nav>
-        </header>
+        </div>
         <!-- Header End -->
+
+        <div class="px-4" style="margin-top: 100px">
+          <div class="mt-4">
+            <h2>Danh Sách Video Bài Học</h2>
+            <table class="table table-striped" id="lesson-video-table">
+              <thead>
+                <tr>
+                  <th>STT</th>
+                  <th>Tiêu Đề</th>
+                  <th>Thuộc Bài Học</th>
+                  <th>Xem</th>
+                  <th>Thao Tác</th>
+                </tr>
+              </thead>
+              <tbody class="lesson-video-list"></tbody>
+            </table>
+          </div>
+        </div>
       </div>
       <!--  Main wrapper End -->
 
@@ -341,7 +359,8 @@
       <script src="../assets/js/sidebarmenu.js"></script>
       <script src="../assets/js/app.min.js"></script>
 
-      <script src="../js/common.js" type="module"></script>
+      <script type="module" src="../js/common.js"></script>
+      <script type="module" src="../js/lessonVideo.js"></script>
     </div>
   </body>
 </html>

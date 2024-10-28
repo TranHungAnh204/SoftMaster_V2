@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Soft Master | Trang Quản Trị</title>
+    <title>Soft Master | Cập Nhật Video Bài Học</title>
     <link
       rel="shortcut icon"
       type="image/png"
@@ -222,7 +222,7 @@
       <!--  Main wrapper -->
       <div class="body-wrapper">
         <!--  Header Start -->
-        <header class="app-header">
+        <div class="app-header top-0">
           <nav class="navbar navbar-expand-lg navbar-light">
             <ul class="navbar-nav">
               <li class="nav-item d-block d-xl-none">
@@ -233,6 +233,16 @@
                 >
                   <i class="ti ti-menu-2"></i>
                 </a>
+              </li>
+              <li class="nav-item">
+                <div class="input-group">
+                  <input
+                    style="width: 388px; background-color: #f5f6fa"
+                    type="text"
+                    class="form-control rounded-5"
+                    placeholder="Tìm kiếm"
+                  />
+                </div>
               </li>
             </ul>
             <div
@@ -331,8 +341,41 @@
               </ul>
             </div>
           </nav>
-        </header>
+        </div>
         <!-- Header End -->
+
+        <div class="px-4" style="margin-top: 100px">
+          <h2 class="mt-4 mb-4">Cập nhật video bài học</h2>
+
+          <form class="update-lesson-video-form">
+            <div class="mb-3">
+              <label for="name" class="form-label">Tiêu đề video</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Nhập tiêu đề video"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="url" class="form-label">Link video</label>
+              <input
+                type="text"
+                class="form-control"
+                id="url"
+                placeholder="Nhập link video"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="course" class="form-label">Bài học</label>
+              <select type="number" class="form-select" id="lesson">
+                <option value="">Chọn bài học</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Cập nhật video bài học</button>
+          </form>
+        </div>
       </div>
       <!--  Main wrapper End -->
 
@@ -341,7 +384,8 @@
       <script src="../assets/js/sidebarmenu.js"></script>
       <script src="../assets/js/app.min.js"></script>
 
-      <script src="../js/common.js" type="module"></script>
+      <script type="module" src="../js/common.js"></script>
+      <script type="module" src="../js/lessonVideo.js"></script>
     </div>
   </body>
 </html>
