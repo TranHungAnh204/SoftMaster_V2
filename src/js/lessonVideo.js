@@ -1,8 +1,14 @@
 import { request } from "../utils/request.js";
 
+const searchParams = new URLSearchParams(window.location.search);
+const id = searchParams.get("id");
+const lesson = searchParams.get("lesson");
+
 // lesson video list
 const deleteLessonVideo = async (id) => {
-  const isConfirm = confirm("Bạn có chắc chắn muốn xoá video bài học này không?");
+  const isConfirm = confirm(
+    "Bạn có chắc chắn muốn xoá video bài học này không?"
+  );
 
   if (isConfirm) {
     try {
@@ -25,8 +31,12 @@ const lessonVideoList = document.querySelector(".lesson-video-list");
 if (lessonVideoList) {
   const fetchLessonVideos = async () => {
     try {
+      const url = lesson
+        ? `/lessonVideo/getLessonVideoByLessonID/${lesson}`
+        : "/lessonVideo/getAll";
+
       const res = await request({
-        url: `/lessonVideo/getAll`,
+        url,
       });
 
       return res;
@@ -42,9 +52,11 @@ if (lessonVideoList) {
           <tr data-id="${it._id}">
             <td>${index + 1}</td>
             <td>${it.title}</td>
-            <td>${it.lessonID?.title ?? ''}</td>
+            <td>${it.lessonID?.title ?? ""}</td>
             <td>
-              <a href=${it.video} target="_blank" style="white-space: nowrap;">Xem video</a>
+              <a href=${
+                it.video
+              } target="_blank" style="white-space: nowrap;">Xem video</a>
             </td>
             <td>
               <div class="d-flex align-items-center">
@@ -124,10 +136,9 @@ if (addLessonVideoForm) {
 }
 
 // update lesson video
-const searchParams = new URLSearchParams(window.location.search);
-const id = searchParams.get("id");
-
-const updateLessonVideoForm = document.querySelector(".update-lesson-video-form");
+const updateLessonVideoForm = document.querySelector(
+  ".update-lesson-video-form"
+);
 
 const renderFormData = async () => {
   try {

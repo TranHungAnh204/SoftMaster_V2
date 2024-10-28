@@ -50,6 +50,12 @@ if (lessonList) {
                   style="white-space: nowrap;"
                   >Cập nhật</a
                 >
+                <a
+                  href="./ds-video-bai-hoc.html?lesson=${it._id}"
+                  class="btn btn-info btn-sm ms-2"
+                  style="white-space: nowrap;"
+                  >DS video</a
+                >
                 <button
                   class="btn btn-danger btn-sm ms-2"
                   onclick="deleteLesson('${it._id}')"
