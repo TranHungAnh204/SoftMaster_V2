@@ -50,6 +50,14 @@ if (testList) {
                   style="white-space: nowrap;"
                   >Cập nhật</a
                 >
+
+                <a
+                  href="./ds-cau-hoi.html?test=${it._id}"
+                  class="btn btn-info btn-sm ms-2"
+                  style="white-space: nowrap;"
+                  >DS câu hỏi</a
+                >
+
                 <button
                   class="btn btn-danger btn-sm ms-2"
                   onclick="deleteTest('${it._id}')"
