@@ -146,7 +146,7 @@ const updateQuestionForm = document.querySelector(".update-question-form");
 const renderFormData = async () => {
   try {
     const res = await request({
-      url: `/question/getDetail/${test}/${id}`,
+      url: `/question/getDetailQuestionById/${test}/${id}`,
     });
 
     updateQuestionForm.querySelector("#title").value = res.title;
