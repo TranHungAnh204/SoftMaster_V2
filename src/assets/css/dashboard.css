@@ -1,0 +1,24 @@
+.card {
+  padding: 24px;
+}
+
+.card p {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.card .icon {
+  margin: 0;
+  font-size: 24px;
+}
+
+.card .quantity {
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: 12px;
+  color: #2a3547;
+}
+
+.feedback-table {
+  table-layout: fixed;
+}

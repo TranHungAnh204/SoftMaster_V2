@@ -56,11 +56,22 @@ if (courseList) {
             <td>${it.name}</td>
             <td>${it.describe.slice(0, 50)}...</td>
             <td>${formatPrice(it.price)}</td>
+            <td>${
+              it.isBlock
+                ? "<button class='btn btn-success btn-sm'>Kích hoạt</button>"
+                : "<button class='btn btn-danger btn-sm'>Tạm khoá</button>"
+            }</td>
             <td>
               <div class="d-flex align-items-center">
                 <a
+                  href="./chitiet-khoahoc.html?id=${it._id}"
+                  class="btn btn-info btn-sm"
+                  style="white-space: nowrap;"
+                  >Chi tiết</a
+                >
+                <a
                   href="./update-khoahoc.html?id=${it._id}"
-                  class="btn btn-warning btn-sm"
+                  class="btn btn-warning btn-sm ms-2"
                   style="white-space: nowrap;"
                   >Cập nhật</a
                 >
