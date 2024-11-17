@@ -54,6 +54,16 @@ if (courseList) {
               />
             </td>
             <td>${it.name}</td>
+            <td>
+              <a href="ds-baihoc.html?course=${
+                it._id
+              }" style="white-space: nowrap;">Xem bài học</a>
+            </td>
+            <td>
+              <a href="dssv-thamgia-khoahoc.html?course=${
+                it._id
+              }" style="white-space: nowrap;">DS Sinh viên</a>
+            </td>
             <td>${it.describe.slice(0, 50)}...</td>
             <td>${formatPrice(it.price)}</td>
             <td>${
@@ -115,35 +125,20 @@ if (courseList) {
 }
 
 // add course
-const renderSubjectSelect = async () => {
-  const subjectSelect = document.getElementById("subject");
-
-  try {
-    const res = await request({
-      url: "/subject/getAll",
-    });
-
-    const htmlStr = res.map(
-      (it) => `<option value=${it._id}>${it.name}</option>`
-    );
-    subjectSelect.innerHTML += htmlStr;
-  } catch (error) {
-    console.log("Failed to get subject list");
-  }
-};
-
 const addCourseForm = document.querySelector(".add-course-form");
 if (addCourseForm) {
-  renderSubjectSelect();
-
   addCourseForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const name = addCourseForm.querySelector("#courseName").value;
     const description = addCourseForm.querySelector("#courseDescription").value;
     const price = addCourseForm.querySelector("#coursePrice").value;
-    const subject = addCourseForm.querySelector("#subject").value;
     const image = addCourseForm.querySelector("#courseImage");
+
+    if (!name || !description || !price || !image.files.length) {
+      alert("Vui lòng nhập đầy đủ thông tin");
+      return;
+    }
 
     try {
       const imageUrl = await uploadImage(image.files[0]);
@@ -153,7 +148,6 @@ if (addCourseForm) {
         img: imageUrl,
         describe: description,
         price,
-        subjectID: subject,
       };
 
       await request({
@@ -189,15 +183,12 @@ const renderFormData = async () => {
     updateCourseForm.querySelector("#courseName").value = res.name;
     updateCourseForm.querySelector("#courseDescription").value = res.describe;
     updateCourseForm.querySelector("#coursePrice").value = res.price;
-    updateCourseForm.querySelector("#subject").value = res.subjectID._id;
   } catch (error) {
     console.log("Failed");
   }
 };
 
 if (updateCourseForm) {
-  await renderSubjectSelect();
-
   // fill data to form
   renderFormData();
 
@@ -208,8 +199,12 @@ if (updateCourseForm) {
     const description =
       updateCourseForm.querySelector("#courseDescription").value;
     const price = updateCourseForm.querySelector("#coursePrice").value;
-    const subject = updateCourseForm.querySelector("#subject").value;
     const image = updateCourseForm.querySelector("#courseImage");
+
+    if (!name || !description || !price) {
+      alert("Vui lòng nhập đầy đủ thông tin");
+      return;
+    }
 
     try {
       let imageUrl;
@@ -223,7 +218,6 @@ if (updateCourseForm) {
         img: imageUrl,
         describe: description,
         price,
-        subjectID: subject,
       };
 
       await request({

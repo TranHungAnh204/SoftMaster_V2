@@ -117,6 +117,13 @@ if (addQuestionForm) {
       };
     });
 
+    const isEmptySomeAnswer = options.some((x) => !x.text);
+
+    if (!title || isEmptySomeAnswer) {
+      alert("Vui lòng nhập đầy đủ thông tin");
+      return;
+    }
+
     try {
       const payload = {
         questions: [
@@ -177,6 +184,13 @@ if (updateQuestionForm) {
         isCorrect: it.querySelector('[name="answer"]').checked,
       };
     });
+
+    const isEmptySomeAnswer = options.some((x) => !x.text);
+
+    if (!title || isEmptySomeAnswer) {
+      alert("Vui lòng nhập đầy đủ thông tin");
+      return;
+    }
 
     try {
       const payload = {

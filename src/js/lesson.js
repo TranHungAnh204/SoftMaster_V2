@@ -1,5 +1,9 @@
 import { request } from "../utils/request.js";
 
+const searchParams = new URLSearchParams(window.location.search);
+const id = searchParams.get("id");
+const courseId = searchParams.get("course");
+
 // lesson list
 const deleteLesson = async (id) => {
   const isConfirm = confirm("Bạn có chắc chắn muốn xoá bài học này không?");
@@ -23,10 +27,15 @@ window.deleteLesson = deleteLesson;
 
 const lessonList = document.querySelector(".lesson-list");
 if (lessonList) {
+  const addBtn = document.querySelector(".add-lesson-btn");
+  addBtn.addEventListener("click", () => {
+    window.location.href = `them-baihoc.html?course=${courseId}`;
+  });
+
   const fetchLessons = async () => {
     try {
       const res = await request({
-        url: `/lesson/getAll`,
+        url: `/lesson/getLessonByCourseID/${courseId}`,
       });
 
       return res;
@@ -45,7 +54,7 @@ if (lessonList) {
             <td>
               <div class="d-flex align-items-center">
                 <a
-                  href="./update-baihoc.html?id=${it._id}"
+                  href="./update-baihoc.html?id=${it._id}&course=${courseId}"
                   class="btn btn-warning btn-sm"
                   style="white-space: nowrap;"
                   >Cập nhật</a
@@ -76,32 +85,17 @@ if (lessonList) {
 }
 
 // add lesson
-const renderCourseSelect = async () => {
-  const courseSelect = document.getElementById("course");
-
-  try {
-    const res = await request({
-      url: "/course/getAll",
-    });
-
-    const htmlStr = res
-      .map((it) => `<option value=${it._id}>${it.name}</option>`)
-      .join("");
-    courseSelect.innerHTML += htmlStr;
-  } catch (error) {
-    console.log("Failed to get course list");
-  }
-};
-
 const addLessonForm = document.querySelector(".add-lesson-form");
 if (addLessonForm) {
-  renderCourseSelect();
-
   addLessonForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const name = addLessonForm.querySelector("#lessonName").value;
-    const courseId = addLessonForm.querySelector("#course").value;
+
+    if (!name) {
+      alert("Vui lòng nhập đẩy đủ thông tin");
+      return;
+    }
 
     try {
       const payload = {
@@ -116,7 +110,7 @@ if (addLessonForm) {
       });
 
       alert("Thêm bài học thành công");
-      window.location.href = "ds-baihoc.html";
+      window.location.href = `ds-baihoc.html?course=${courseId}`;
     } catch (error) {
       alert("Không thể thêm bài học");
     }
@@ -124,9 +118,6 @@ if (addLessonForm) {
 }
 
 // update lesson
-const searchParams = new URLSearchParams(window.location.search);
-const id = searchParams.get("id");
-
 const updateLessonForm = document.querySelector(".update-lesson-form");
 
 const renderFormData = async () => {
@@ -136,15 +127,12 @@ const renderFormData = async () => {
     });
 
     updateLessonForm.querySelector("#lessonName").value = res.title;
-    updateLessonForm.querySelector("#course").value = res.courseID;
   } catch (error) {
     console.log("Failed");
   }
 };
 
 if (updateLessonForm) {
-  await renderCourseSelect();
-
   // fill data to form
   renderFormData();
 
@@ -152,12 +140,16 @@ if (updateLessonForm) {
     e.preventDefault();
 
     const title = updateLessonForm.querySelector("#lessonName").value;
-    const course = updateLessonForm.querySelector("#course").value;
+
+    if (!title) {
+      alert("Vui lòng nhập đẩy đủ thông tin");
+      return;
+    }
 
     try {
       const payload = {
         title,
-        courseID: course,
+        courseID: courseId,
       };
 
       await request({
@@ -167,7 +159,7 @@ if (updateLessonForm) {
       });
 
       alert("Cập nhật bài học thành công");
-      window.location.href = "ds-baihoc.html";
+      window.location.href = `ds-baihoc.html?course=${courseId}`;
     } catch (error) {
       alert("Không thể cập nhật bài học");
     }

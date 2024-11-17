@@ -114,6 +114,11 @@ if (addLessonVideoForm) {
     const lessonId = addLessonVideoForm.querySelector("#lesson").value;
     const video = addLessonVideoForm.querySelector("#url").value;
 
+    if (!name || !lessonId || !video) {
+      alert("Vui lòng nhập đầy đủ thông tin");
+      return;
+    }
+
     try {
       const payload = {
         title: name,
@@ -166,6 +171,11 @@ if (updateLessonVideoForm) {
     const name = updateLessonVideoForm.querySelector("#name").value;
     const lessonId = updateLessonVideoForm.querySelector("#lesson").value;
     const video = updateLessonVideoForm.querySelector("#url").value;
+
+    if (!name || !lessonId || !video) {
+      alert("Vui lòng nhập đầy đủ thông tin");
+      return;
+    }
 
     try {
       const payload = {

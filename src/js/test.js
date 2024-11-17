@@ -105,6 +105,11 @@ if (addTestForm) {
     const title = addTestForm.querySelector("#title").value;
     const lessonId = addTestForm.querySelector("#lesson").value;
 
+    if (!title || !lessonId) {
+      alert("Vui lòng nhập đầy đủ thông tin");
+      return;
+    }
+
     try {
       const payload = {
         title,
@@ -155,6 +160,11 @@ if (updateTestForm) {
 
     const title = updateTestForm.querySelector("#title").value;
     const lessonId = updateTestForm.querySelector("#lesson").value;
+
+    if (!title || !lessonId) {
+      alert("Vui lòng nhập đầy đủ thông tin");
+      return;
+    }
 
     try {
       const payload = {

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Soft Master | Danh sách câu hỏi</title>
+    <title>Soft Master | Danh sách sinh viên tham gia khoá học</title>
     <link
       rel="shortcut icon"
       type="image/png"
@@ -290,22 +290,18 @@
 
         <div class="px-4" style="margin-top: 100px">
           <div class="mt-4">
-            <h2>Danh Sách Câu Hỏi</h2>
+            <h2>Danh Sách SV Đã Tham Gia Khoá Học</h2>
 
-            <div class="btn btn-primary my-2 add-question-btn">
-              Thêm câu hỏi
-            </div>
-
-            <table class="table table-striped" id="question-table">
+            <table class="table table-striped">
               <thead>
                 <tr>
                   <th>STT</th>
-                  <th>Câu Hỏi</th>
-                  <th>Đáp án</th>
+                  <th>Tên Sinh Viên</th>
+                  <th>Email</th>
                   <th>Thao Tác</th>
                 </tr>
               </thead>
-              <tbody class="question-list"></tbody>
+              <tbody class="student-enrolled-course"></tbody>
             </table>
           </div>
         </div>
@@ -318,7 +314,7 @@
       <script src="../assets/js/app.min.js"></script>
 
       <script type="module" src="../js/common.js"></script>
-      <script type="module" src="../js/questions.js"></script>
+      <script type="module" src="../js/student-enrolled-course.js"></script>
     </div>
   </body>
 </html>
