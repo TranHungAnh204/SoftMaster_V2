@@ -58,7 +58,7 @@ if (courseList) {
               <a href="ds-baihoc.html?course=${
                 it._id
               }" style="white-space: nowrap;">Xem bài học</a>
-            </td>
+            </td> 
             <td>
               <a href="dssv-thamgia-khoahoc.html?course=${
                 it._id
