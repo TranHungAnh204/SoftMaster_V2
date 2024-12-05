@@ -1,6 +1,4 @@
 
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -294,20 +292,117 @@
               </ul>
             </div>
           </nav>
+          <style>
+            .profile-card {
+              max-width: 800px;
+              margin: 20px auto;
+              border: 1px solid #ddd;
+              border-radius: 10px;
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+              padding: 20px;
+              background-color: #fff;
+            }
+            .profile-avatar {
+              width: 150px;
+              height: 150px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+            .profile-header {
+              text-align: center;
+              margin-bottom: 20px;
+            }
+            .profile-details {
+              margin-top: 20px;
+            }
+            .badge {
+              font-size: 16px;
+            }
+          </style>
+        </head>
+        <body>
+          <div class="container">
+            <div class="profile-card">
+              <!-- Header -->
+              <div class="profile-header">
+                <img
+                  src="https://via.placeholder.com/150" 
+                  alt="Avatar"
+                  class="profile-avatar mb-3"
+                  id="avatar"
+                />
+                <h3 id="name">Tên Giảng Viên</h3>
+                <p class="text-muted" id="major">Chuyên Ngành</p>
+                <p class="badge bg-primary text-white" id="gender">Giới tính</p>
+              </div>
+        
+              <!-- Slogan -->
+              <div class="text-center">
+                <blockquote class="blockquote">
+                  <p id="slogan">"Slogan truyền cảm hứng của giảng viên"</p>
+                </blockquote>
+              </div>
+        
+              <!-- Details -->
+              <div class="profile-details">
+                <div class="row mb-3">
+                  <div class="col-md-4">
+                    <strong>Email:</strong>
+                  </div>
+                  <div class="col-md-8" id="email">
+                    giangvien@example.com
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-4">
+                    <strong>Phone:</strong>
+                  </div>
+                  <div class="col-md-8" id="phone">
+                    0123-456-789
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-4">
+                    <strong>Số Người Theo Dõi:</strong>
+                  </div>
+                  <div class="col-md-8">
+                    <span id="followers">1000</span> người
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Bootstrap JS -->
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+          <script>
+            // Fake data từ API (thay thế bằng dữ liệu thật từ API)
+            const profileData = {
+              name: "Nguyễn Văn A",
+              email: "nguyenvana@example.com",
+              phone: "0987-654-321",
+              avatar: "https://via.placeholder.com/150",
+              major: "Công Nghệ Thông Tin",
+              slogan: "Học tập là con đường ngắn nhất dẫn tới thành công.",
+              gender: "Nam",
+              followers: 1500
+            };
+        
+            // Đổ dữ liệu vào giao diện
+            document.getElementById("name").textContent = profileData.name;
+            document.getElementById("email").textContent = profileData.email;
+            document.getElementById("phone").textContent = profileData.phone;
+            document.getElementById("avatar").src = profileData.avatar;
+            document.getElementById("major").textContent = profileData.major;
+            document.getElementById("slogan").textContent = `"${profileData.slogan}"`;
+            document.getElementById("gender").textContent = profileData.gender;
+            document.getElementById("followers").textContent = profileData.followers;
+          </script>
         </header>
         <!-- Header End -->
-         
-      </div>
-      <!--  Main wrapper End -->
-
-      <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
-      <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-      <script src="../assets/js/sidebarmenu.js"></script>
-      <script src="../assets/js/app.min.js"></script>
-
-      <script src="../js/common.js" type="module"></script>
-    </div>
-    
-  </body>
+       
+        </body>
+        </html>
 </html>
+
 

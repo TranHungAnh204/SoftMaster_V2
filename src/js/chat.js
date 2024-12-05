@@ -90,7 +90,7 @@ chatBox.addEventListener("keyup", async (e) => {
       alert("Vui lòng nhập tin nhắn");
     } else {
       await request({
-        url: `/message/addMessage/${currentSenderId}/${user._id}`,
+        url: `/message/addMessage/${user._id}/${currentSenderId}`,
         method: "POST",
         body: JSON.stringify({
           content: value,
