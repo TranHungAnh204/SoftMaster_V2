@@ -30,148 +30,153 @@
       data-sidebar-position="fixed"
       data-header-position="fixed"
     >
-      <!-- Sidebar Start -->
-      <aside class="left-sidebar">
-        <div
-          class="brand-logo d-flex align-items-center justify-content-between"
-        >
-          <a href="./index.html" class="text-nowrap logo-img">
-            <h2>
-              <strong class="text-primary">Soft</strong>
-              <strong style="color: #202224">Master</strong>
-            </h2>
-          </a>
-          <div
-            class="close-btn d-xl-none d-block sidebartoggler cursor-pointer"
-            id="sidebarCollapse"
-          >
-            <i class="ti ti-x fs-8"></i>
-          </div>
-        </div>
-
-        <!-- Sidebar navigation-->
-        <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
-          <ul id="sidebarnav">
-            <li class="nav-small-cap">
-              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./index.html" aria-expanded="false">
-                <span class="hide-menu">Trang tổng quan</span>
+           <!-- Sidebar Start -->
+           <aside class="left-sidebar">
+            <div
+              class="brand-logo d-flex align-items-center justify-content-between"
+            >
+              <a href="./index.html" class="text-nowrap logo-img">
+                <h2>
+                  <strong class="text-primary">Soft</strong>
+                  <strong style="color: #202224">Master</strong>
+                </h2>
               </a>
-            </li>
-            <li class="sidebar-item">
-              <a
-                class="sidebar-link"
-                href="javascript:void(0)"
-                data-bs-toggle="collapse"
-                data-bs-target="#courseDropdown"
-                aria-expanded="false"
+              <div
+                class="close-btn d-xl-none d-block sidebartoggler cursor-pointer"
+                id="sidebarCollapse"
               >
-                <span class="hide-menu">Khóa học</span>
-              </a>
-              <ul
-                id="courseDropdown"
-                class="collapse"
-                data-bs-parent="#sidebarnav"
-              >
+                <i class="ti ti-x fs-8"></i>
+              </div>
+            </div>
+    
+            <!-- Sidebar navigation-->
+            <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+              <ul id="sidebarnav">
+                <li class="nav-small-cap">
+                  <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                </li>
                 <li class="sidebar-item">
-                  <a
-                    class="sidebar-link"
-                    href="./dskhoahoc.html"
-                    aria-expanded="false"
-                  >
-                    <span class="hide-menu">Danh sách khóa học</span>
+                  <a class="sidebar-link" href="./index.html" aria-expanded="false">
+                    <span class="hide-menu">Trang tổng quan</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./chat.html" aria-expanded="false">
+                    <span class="hide-menu">Chat</span>
                   </a>
                 </li>
                 <li class="sidebar-item">
                   <a
                     class="sidebar-link"
-                    href="./them-khoahoc.html"
+                    href="javascript:void(0)"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#courseDropdown"
                     aria-expanded="false"
                   >
-                    <span class="hide-menu">Thêm khóa học</span>
+                    <span class="hide-menu">Khóa học</span>
                   </a>
+                  <ul
+                    id="courseDropdown"
+                    class="collapse"
+                    data-bs-parent="#sidebarnav"
+                  >
+                    <li class="sidebar-item">
+                      <a
+                        class="sidebar-link"
+                        href="./dskhoahoc.html"
+                        aria-expanded="false"
+                      >
+                        <span class="hide-menu">Danh sách khóa học</span>
+                      </a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a
+                        class="sidebar-link"
+                        href="./them-khoahoc.html"
+                        aria-expanded="false"
+                      >
+                        <span class="hide-menu">Thêm khóa học</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+    
+                <li class="sidebar-item">
+                  <a
+                    class="sidebar-link"
+                    href="javascript:void(0)"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#lessonVidDropdown"
+                    aria-expanded="false"
+                  >
+                    <span class="hide-menu">Video bài học</span>
+                  </a>
+                  <ul
+                    id="lessonVidDropdown"
+                    class="collapse"
+                    data-bs-parent="#sidebarnav"
+                  >
+                    <li class="sidebar-item">
+                      <a
+                        class="sidebar-link"
+                        href="./ds-video-bai-hoc.html"
+                        aria-expanded="false"
+                      >
+                        <span class="hide-menu">Danh sách video bài học</span>
+                      </a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a
+                        class="sidebar-link"
+                        href="./them-video-bai-hoc.html"
+                        aria-expanded="false"
+                      >
+                        <span class="hide-menu">Thêm video bài học</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+    
+                <li class="sidebar-item">
+                  <a
+                    class="sidebar-link"
+                    href="javascript:void(0)"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#testDropdown"
+                    aria-expanded="false"
+                  >
+                    <span class="hide-menu">Bài test</span>
+                  </a>
+                  <ul
+                    id="testDropdown"
+                    class="collapse"
+                    data-bs-parent="#sidebarnav"
+                  >
+                    <li class="sidebar-item">
+                      <a
+                        class="sidebar-link"
+                        href="./ds-test.html"
+                        aria-expanded="false"
+                      >
+                        <span class="hide-menu">Danh sách bài test</span>
+                      </a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a
+                        class="sidebar-link"
+                        href="./them-baitest.html"
+                        aria-expanded="false"
+                      >
+                        <span class="hide-menu">Thêm bài test</span>
+                      </a>
+                    </li>
+                  </ul>
                 </li>
               </ul>
-            </li>
-
-            <li class="sidebar-item">
-              <a
-                class="sidebar-link"
-                href="javascript:void(0)"
-                data-bs-toggle="collapse"
-                data-bs-target="#lessonVidDropdown"
-                aria-expanded="false"
-              >
-                <span class="hide-menu">Video bài học</span>
-              </a>
-              <ul
-                id="lessonVidDropdown"
-                class="collapse"
-                data-bs-parent="#sidebarnav"
-              >
-                <li class="sidebar-item">
-                  <a
-                    class="sidebar-link"
-                    href="./ds-video-bai-hoc.html"
-                    aria-expanded="false"
-                  >
-                    <span class="hide-menu">Danh sách video bài học</span>
-                  </a>
-                </li>
-                <li class="sidebar-item">
-                  <a
-                    class="sidebar-link"
-                    href="./them-video-bai-hoc.html"
-                    aria-expanded="false"
-                  >
-                    <span class="hide-menu">Thêm video bài học</span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-
-            <li class="sidebar-item">
-              <a
-                class="sidebar-link"
-                href="javascript:void(0)"
-                data-bs-toggle="collapse"
-                data-bs-target="#testDropdown"
-                aria-expanded="false"
-              >
-                <span class="hide-menu">Bài test</span>
-              </a>
-              <ul
-                id="testDropdown"
-                class="collapse"
-                data-bs-parent="#sidebarnav"
-              >
-                <li class="sidebar-item">
-                  <a
-                    class="sidebar-link"
-                    href="./ds-test.html"
-                    aria-expanded="false"
-                  >
-                    <span class="hide-menu">Danh sách bài test</span>
-                  </a>
-                </li>
-                <li class="sidebar-item">
-                  <a
-                    class="sidebar-link"
-                    href="./them-baitest.html"
-                    aria-expanded="false"
-                  >
-                    <span class="hide-menu">Thêm bài test</span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-        <!-- End Sidebar navigation -->
-      </aside>
-      <!--  Sidebar End -->
+            </nav>
+            <!-- End Sidebar navigation -->
+          </aside>
+          <!--  Sidebar End -->
 
       <!--  Main wrapper -->
       <div class="body-wrapper">

@@ -190,7 +190,6 @@ if (updateLessonVideoForm) {
         body: JSON.stringify(payload),
       });
 
-      alert("Cập nhật video bài học thành công");
       window.location.href = "ds-video-bai-hoc.html";
     } catch (error) {
       alert("Không thể cập nhật video bài học");

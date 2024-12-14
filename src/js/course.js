@@ -6,25 +6,25 @@ import uploadImage from "../utils/uploadImage.js";
 const user = JSON.parse(localStorage.getItem(USER_INFO_STORAGE_KEY));
 
 // list course
-const deleteCourse = async (id) => {
-  const isConfirm = confirm("Bạn có chắc chắn muốn xoá khoá học này không?");
+// const deleteCourse = async (id) => {
+//   const isConfirm = confirm("Bạn có chắc chắn muốn xoá khoá học này không?");
 
-  if (isConfirm) {
-    try {
-      await request({
-        url: `/course/delete/${id}`,
-        method: "DELETE",
-      });
-      const courseItem = document.querySelector(`[data-id="${id}"]`);
-      courseItem.remove();
+//   if (isConfirm) {
+//     try {
+//       await request({
+//         url: `/course/delete/${id}`,
+//         method: "DELETE",
+//       });
+//       const courseItem = document.querySelector(`[data-id="${id}"]`);
+//       courseItem.remove();
 
-      alert("Xoá khoá học thành công");
-    } catch (error) {
-      alert("Có lỗi xảy ra, vui lòng thử lại");
-    }
-  }
-};
-window.deleteCourse = deleteCourse;
+//       alert("Xoá khoá học thành công");
+//     } catch (error) {
+//       alert("Có lỗi xảy ra, vui lòng thử lại");
+//     }
+//   }
+// };
+// window.deleteCourse = deleteCourse;
 
 const courseList = document.querySelector(".course-list");
 if (courseList) {
@@ -50,27 +50,24 @@ if (courseList) {
                 src=${it.img}
                 alt="${it.name}"
                 class="course-img"
-                style="width: 80px; height: auto"
+                style="width: 100px; height: 100px"
               />
             </td>
             <td>${it.name}</td>
             <td>
-              <a href="ds-baihoc.html?course=${
-                it._id
-              }" style="white-space: nowrap;">Xem bài học</a>
+              <a href="ds-baihoc.html?course=${it._id
+          }" style="white-space: nowrap;">Xem bài học</a>
             </td> 
             <td>
-              <a href="dssv-thamgia-khoahoc.html?course=${
-                it._id
-              }" style="white-space: nowrap;">DS Sinh viên</a>
+              <a href="dssv-thamgia-khoahoc.html?course=${it._id
+          }" style="white-space: nowrap;">DS Sinh viên</a>
             </td>
             <td>${it.describe.slice(0, 50)}...</td>
             <td>${formatPrice(it.price)}</td>
-            <td>${
-              it.isBlock
-                ? "<button class='btn btn-success btn-sm'>Kích hoạt</button>"
-                : "<button class='btn btn-danger btn-sm'>Tạm khoá</button>"
-            }</td>
+            <td>${it.isBlock
+            ? "<button class='btn btn-success btn-sm'>Kích hoạt</button>"
+            : "<button class='btn btn-danger btn-sm'>Tạm khoá</button>"
+          }</td>
             <td>
               <div class="d-flex align-items-center">
                 <a
@@ -85,19 +82,19 @@ if (courseList) {
                   style="white-space: nowrap;"
                   >Cập nhật</a
                 >
-                <button
-                  class="btn btn-danger btn-sm ms-2"
-                  onclick="deleteCourse('${it._id}')"
-                >
-                  Xóa
-                </button>
+      
               </div>
             </td>
           </tr>
         `
       )
       .join(" ");
-
+    {/* <button
+                  class="btn btn-danger btn-sm ms-2"
+                  onclick="deleteCourse('${it._id}')"
+                >
+                  Xóa
+                </button> */}
     courseList.innerHTML = htmlStr;
   };
   const data = await fetchCourses();

@@ -29,7 +29,7 @@ if (courseList) {
                 src=${it.img}
                 alt="${it.name}"
                 class="course-img"
-                style="width: 80px; height: auto"
+                style="width: 80px; height: 80px"
               />
             </td>
             <td>${it.name}</td>

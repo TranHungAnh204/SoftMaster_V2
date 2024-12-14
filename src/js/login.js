@@ -8,6 +8,16 @@ const onLogin = async (e) => {
   const emailElm = loginForm.querySelector("#email");
   const passwordElm = loginForm.querySelector("#password");
 
+  // Kiểm tra đầu vào
+  if (!emailElm.value.trim() || !passwordElm.value.trim()) {
+    alert("Vui lòng nhập email và mật khẩu");
+    return;
+  }
+  if (!/\S+@\S+\.\S+/.test(emailElm.value)) {
+    alert("Email không đúng định dạng");
+    return;
+  }
+  
   try {
     const payload = {
       email: emailElm.value,

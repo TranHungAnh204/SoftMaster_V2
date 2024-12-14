@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,6 +18,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    
   </head>
 
   <body>
@@ -58,6 +60,11 @@
             <li class="sidebar-item">
               <a class="sidebar-link" href="./index.html" aria-expanded="false">
                 <span class="hide-menu">Trang tổng quan</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./chat.html" aria-expanded="false">
+                <span class="hide-menu">Chat</span>
               </a>
             </li>
             <li class="sidebar-item">
@@ -176,7 +183,7 @@
       <!--  Main wrapper -->
       <div class="body-wrapper">
         <!--  Header Start -->
-        <div class="app-header top-0">
+        <header class="app-header">
           <nav class="navbar navbar-expand-lg navbar-light">
             <ul class="navbar-nav">
               <li class="nav-item d-block d-xl-none">
@@ -187,16 +194,6 @@
                 >
                   <i class="ti ti-menu-2"></i>
                 </a>
-              </li>
-              <li class="nav-item">
-                <div class="input-group">
-                  <input
-                    style="width: 388px; background-color: #f5f6fa"
-                    type="text"
-                    class="form-control rounded-5"
-                    placeholder="Tìm kiếm"
-                  />
-                </div>
               </li>
             </ul>
             <div
@@ -257,7 +254,7 @@
                     aria-expanded="false"
                   >
                     <img
-                      src="../assets/images/profile.png"
+                      src="../assets/images/profile.jpg"
                       alt=""
                       width="35"
                       height="35"
@@ -268,14 +265,14 @@
                     class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up"
                     aria-labelledby="drop2"
                   >
-                    <div class="message-body">
-                      <a
-                        href="javascript:void(0)"
-                        class="d-flex align-items-center gap-2 dropdown-item"
-                      >
-                        <i class="ti ti-user fs-6"></i>
-                        <p class="mb-0 fs-3">Cài Đặt Tài Khoản</p>
-                      </a>
+                  <div class="message-body">
+                    <a
+                      href="profileGV.html"
+                      class="d-flex align-items-center gap-2 dropdown-item"
+                    >
+                      <i class="ti ti-user fs-6"></i>
+                      <p class="mb-0 fs-3">Cài Đặt Tài Khoản</p>
+                    </a>
                       <a
                         href="javascript:void(0)"
                         class="d-flex align-items-center gap-2 dropdown-item"
@@ -295,55 +292,58 @@
               </ul>
             </div>
           </nav>
-        </div>
+          <div class="px-4" style="margin-top: 100px">
+            <h2 class="mt-4 mb-4">Thêm khóa học</h2>
+          
+            <form class="add-course-form">
+              <div class="mb-3">
+                <label for="courseName" class="form-label">Tên khóa học</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="courseName"
+                  placeholder="Nhập tên khóa học"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="courseDescription" class="form-label"
+                  >Mô tả khóa học</label
+                >
+                <textarea
+                  class="form-control"
+                  id="courseDescription"
+                  rows="3"
+                  placeholder="Nhập mô tả khóa học"
+                ></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="coursePrice" class="form-label">Giá</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="coursePrice"
+                  placeholder="Nhập giá khóa học"
+                />
+              </div>
+          
+              <div class="mb-3">
+                <label for="courseImage" class="form-label">Ảnh khóa học</label>
+                <input
+                  type="file"
+                  class="form-control"
+                  id="courseImage"
+                  accept="image/*"
+                />
+              </div>
+              <button type="submit" class="btn btn-primary">Thêm khóa học</button>
+            </form>
+          </div>
+          
+        </header>
         <!-- Header End -->
-
-        <div class="px-4" style="margin-top: 100px">
-          <h2 class="mt-4 mb-4">Thêm khóa học</h2>
-
-          <form class="add-course-form">
-            <div class="mb-3">
-              <label for="courseName" class="form-label">Tên khóa học</label>
-              <input
-                type="text"
-                class="form-control"
-                id="courseName"
-                placeholder="Nhập tên khóa học"
-              />
-            </div>
-            <div class="mb-3">
-              <label for="courseDescription" class="form-label"
-                >Mô tả khóa học</label
-              >
-              <textarea
-                class="form-control"
-                id="courseDescription"
-                rows="3"
-                placeholder="Nhập mô tả khóa học"
-              ></textarea>
-            </div>
-            <div class="mb-3">
-              <label for="coursePrice" class="form-label">Giá</label>
-              <input
-                type="number"
-                class="form-control"
-                id="coursePrice"
-                placeholder="Nhập giá khóa học"
-              />
-            </div>
-
-            <div class="mb-3">
-              <label for="courseImage" class="form-label">Ảnh khóa học</label>
-              <input
-                type="file"
-                class="form-control"
-                id="courseImage"
-                accept="image/*"
-              />
-            </div>
-            <button type="submit" class="btn btn-primary">Thêm khóa học</button>
-          </form>
-        </div>
+        
+        
+        
       </div>
       <!--  Main wrapper End -->
 
@@ -355,5 +355,7 @@
       <script type="module" src="../js/common.js"></script>
       <script type="module" src="../js/course.js"></script>
     </div>
+    
   </body>
 </html>
+

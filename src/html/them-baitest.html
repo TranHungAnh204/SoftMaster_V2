@@ -1,9 +1,11 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Soft Master | Thêm Bài Học</title>
+    <title>Soft Master | Trang Quản Trị</title>
     <link
       rel="shortcut icon"
       type="image/png"
@@ -17,6 +19,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    
   </head>
 
   <body>
@@ -58,6 +61,11 @@
             <li class="sidebar-item">
               <a class="sidebar-link" href="./index.html" aria-expanded="false">
                 <span class="hide-menu">Trang tổng quan</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./chat.html" aria-expanded="false">
+                <span class="hide-menu">Chat</span>
               </a>
             </li>
             <li class="sidebar-item">
@@ -176,7 +184,7 @@
       <!--  Main wrapper -->
       <div class="body-wrapper">
         <!--  Header Start -->
-        <div class="app-header top-0">
+        <header class="app-header">
           <nav class="navbar navbar-expand-lg navbar-light">
             <ul class="navbar-nav">
               <li class="nav-item d-block d-xl-none">
@@ -187,16 +195,6 @@
                 >
                   <i class="ti ti-menu-2"></i>
                 </a>
-              </li>
-              <li class="nav-item">
-                <div class="input-group">
-                  <input
-                    style="width: 388px; background-color: #f5f6fa"
-                    type="text"
-                    class="form-control rounded-5"
-                    placeholder="Tìm kiếm"
-                  />
-                </div>
               </li>
             </ul>
             <div
@@ -257,7 +255,7 @@
                     aria-expanded="false"
                   >
                     <img
-                      src="../assets/images/profile.png"
+                      src="../assets/images/profile.jpg"
                       alt=""
                       width="35"
                       height="35"
@@ -268,14 +266,14 @@
                     class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up"
                     aria-labelledby="drop2"
                   >
-                    <div class="message-body">
-                      <a
-                        href="javascript:void(0)"
-                        class="d-flex align-items-center gap-2 dropdown-item"
-                      >
-                        <i class="ti ti-user fs-6"></i>
-                        <p class="mb-0 fs-3">Cài Đặt Tài Khoản</p>
-                      </a>
+                  <div class="message-body">
+                    <a
+                      href="profileGV.html"
+                      class="d-flex align-items-center gap-2 dropdown-item"
+                    >
+                      <i class="ti ti-user fs-6"></i>
+                      <p class="mb-0 fs-3">Cài Đặt Tài Khoản</p>
+                    </a>
                       <a
                         href="javascript:void(0)"
                         class="d-flex align-items-center gap-2 dropdown-item"
@@ -295,35 +293,38 @@
               </ul>
             </div>
           </nav>
-        </div>
+          <div class="px-4" style="margin-top: 100px">
+            <h2 class="mt-4 mb-4">Thêm bài test</h2>
+          
+            <form class="add-test-form">
+              <div class="mb-3">
+                <label for="title" class="form-label">Tên bài test</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="title"
+                  placeholder="Nhập tên bài test"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="lesson" class="form-label">Bài học</label>
+                <select class="form-select" id="lesson">
+                  <option value="">Chọn bài học</option>
+                </select>
+              </div>
+          
+              <button type="submit" class="btn btn-primary">Thêm bài test</button>
+            </form>
+          </div>
+          
+          
+        </header>
         <!-- Header End -->
-
-        <div class="px-4" style="margin-top: 100px">
-          <h2 class="mt-4 mb-4">Thêm bài test</h2>
-
-          <form class="add-test-form">
-            <div class="mb-3">
-              <label for="title" class="form-label">Tên bài test</label>
-              <input
-                type="text"
-                class="form-control"
-                id="title"
-                placeholder="Nhập tên bài test"
-              />
-            </div>
-            <div class="mb-3">
-              <label for="lesson" class="form-label">Bài học</label>
-              <select class="form-select" id="lesson">
-                <option value="">Chọn bài học</option>
-              </select>
-            </div>
-
-            <button type="submit" class="btn btn-primary">Thêm bài test</button>
-          </form>
-        </div>
+         
       </div>
       <!--  Main wrapper End -->
 
+     
       <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
       <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
       <script src="../assets/js/sidebarmenu.js"></script>
@@ -332,5 +333,7 @@
       <script type="module" src="../js/common.js"></script>
       <script type="module" src="../js/test.js"></script>
     </div>
+    
   </body>
 </html>
+
